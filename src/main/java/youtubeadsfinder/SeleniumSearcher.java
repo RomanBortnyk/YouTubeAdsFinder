@@ -22,6 +22,7 @@ public class SeleniumSearcher {
 
         generator = new VideoLinksGenerator();
         appender = new StringToFileAppender("AdLinks");
+        repository = new VideoLinksRepository("/home/romanb/Desktop/AdLinksReserve");
 
     }
 
@@ -55,8 +56,6 @@ public class SeleniumSearcher {
 
                 String href = element.getAttribute("href");
 
-//                WebElement element1 = driver.findElement(By.cssSelector("span[aria-label='Subscribe']"));
-//                String ariaLabel = element1.getAttribute("aria-label");
 
                 if ( href != null && href.equals(currentLink)){
 
@@ -101,11 +100,16 @@ public class SeleniumSearcher {
         Proxy proxy = new Proxy();
         proxy.setProxyType(Proxy.ProxyType.MANUAL);
 
+        //uk 20+ ads
         proxy.setHttpProxy("217.33.216.114:8080");
         proxy.setSslProxy("217.33.216.114:8080");
 
-//        proxy.setHttpProxy("158.69.201.48:80");
-//        proxy.setSslProxy("158.69.201.48:80");
+//        proxy.setHttpProxy("208.75.95.148:80");
+//        proxy.setSslProxy("208.75.95.148:80");
+
+        // us elite
+//        208.75.95.148	80
+
 
         DesiredCapabilities capability = new DesiredCapabilities();
 

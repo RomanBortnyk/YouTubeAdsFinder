@@ -12,8 +12,13 @@ public class VideoLinksGeneratorTest {
     @Test
     public void generate() throws Exception {
 
+
+
         VideoLinksGenerator linksGenerator = new VideoLinksGenerator();
+
         linksGenerator.generate(100);
+
+        System.out.println();
 
     }
 

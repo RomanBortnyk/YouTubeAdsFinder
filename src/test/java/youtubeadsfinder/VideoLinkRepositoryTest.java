@@ -17,7 +17,7 @@ public class VideoLinkRepositoryTest {
     @Test
     public void isExist() throws Exception {
 
-        VideoLinksRepository repository = new VideoLinksRepository("AdLinks");
+        VideoLinksRepository repository = new VideoLinksRepository("/home/romanb/Desktop/AdLinksReserve");
 
         ArrayList<String> test = repository.getLinks();
 
