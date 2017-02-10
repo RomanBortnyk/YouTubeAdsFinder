@@ -17,7 +17,7 @@ public class VideoLinkRepositoryTest {
     @Test
     public void isExist() throws Exception {
 
-        VideoLinkRepository repository = new VideoLinkRepository ("AdLinks");
+        VideoLinksRepository repository = new VideoLinksRepository("AdLinks");
 
         ArrayList<String> test = repository.getLinks();
 

@@ -8,18 +8,23 @@ import java.util.ArrayList;
 /**
  * Created by romanb on 2/10/17.
  */
-public class VideoLinkRepository {
+public class VideoLinksRepository {
 
     private ArrayList<String> links;
     private String pathToFile;
 
 
-    public VideoLinkRepository(String pathToFile){
+    public VideoLinksRepository(String pathToFile){
 
         this.pathToFile = pathToFile;
         links= new ArrayList<>();
 
         readLinks();
+    }
+
+    public void add (String string){
+
+        links.add(string);
     }
 
     private void readLinks (){

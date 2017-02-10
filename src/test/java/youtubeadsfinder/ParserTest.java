@@ -3,9 +3,6 @@ package youtubeadsfinder;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import javax.print.Doc;
-import java.util.ArrayList;
-
 /**
  * Created by romanb on 2/7/17.
  */
@@ -38,7 +35,7 @@ public class ParserTest {
     @Test
     public void getVideoDurationInSeconds (){
 
-        VideoLinkRepository repository = new VideoLinkRepository("AdLinks");
+        VideoLinksRepository repository = new VideoLinksRepository("AdLinks");
 
         int commonDuration= 0;
 

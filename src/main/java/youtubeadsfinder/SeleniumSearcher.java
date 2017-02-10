@@ -15,10 +15,13 @@ import java.util.ArrayList;
 public class SeleniumSearcher {
 
     private VideoLinksGenerator generator;
+    private StringToFileAppender appender;
+    private VideoLinksRepository repository;
 
     public SeleniumSearcher (){
 
         generator = new VideoLinksGenerator();
+        appender = new StringToFileAppender("AdLinks");
 
     }
 
@@ -66,7 +69,16 @@ public class SeleniumSearcher {
 
                     }else{
 
-                        System.out.println(log + "ad link: " + href);
+                        if (repository.isExist(href)){
+
+                            System.out.println(log + "ad link: duplicate" );
+                        }else {
+
+                            System.out.println(log + "ad link: " + href);
+                            repository.add(href);
+                            appender.appendString(href);
+                        }
+
                     }
                 }
 
