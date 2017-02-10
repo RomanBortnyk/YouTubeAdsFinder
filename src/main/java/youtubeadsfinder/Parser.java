@@ -1,4 +1,4 @@
-package youtubescrapper;
+package youtubeadsfinder;
 
 import com.sun.xml.internal.ws.server.ServerRtException;
 import org.apache.commons.lang.StringEscapeUtils;
@@ -6,7 +6,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
-import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -25,7 +24,7 @@ public class Parser {
     public Parser() {
 
 //        this.proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("96.239.193.243"	,8080) );
-        this.proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("158.69.201.48",80) );
+//        this.proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("158.69.201.48",80) );
 
     }
 
@@ -33,6 +32,7 @@ public class Parser {
 
         getScriptStringWithAdTag(video);
         createDoubleClickLink(video);
+
 //        requestAdSystem(video);
 
     }

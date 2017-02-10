@@ -1,6 +1,5 @@
-package youtubescrapper;
+package youtubeadsfinder;
 
-import org.jsoup.nodes.Document;
 import org.junit.Test;
 
 import javax.print.Doc;
@@ -12,7 +11,7 @@ import java.util.ArrayList;
 public class ParserTest {
 
     @Test
-    public void parserTest (){
+    public void parse(){
 
 //        VideoLinksGenerator linksGenerator = new VideoLinksGenerator(10);
 //        ArrayList<String> links = linksGenerator.generate();
@@ -23,7 +22,6 @@ public class ParserTest {
 
         Video video1 = new Video("https://www.youtube.com/watch?v=x559i-sS9oM");
         parser.parse(video1);
-        writer.write(video1);
 
         System.out.println();
 

@@ -1,15 +1,16 @@
-package youtubescrapper;
-
+package youtubeadsfinder;
 
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 /**
- * Unit test for simple App.
+ * Created by romanb on 2/10/17.
  */
-public class AppTest {
+public class VideoToFileWriterTest {
 
     @Test
-    public void VideoToFileWriterTest (){
+    public void write() throws Exception {
 
         VideoToFileWriter writer = new VideoToFileWriter();
         Parser parser = new Parser();
@@ -21,5 +22,3 @@ public class AppTest {
     }
 
 }
-
-

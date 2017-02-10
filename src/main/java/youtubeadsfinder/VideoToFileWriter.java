@@ -1,4 +1,4 @@
-package youtubescrapper;
+package youtubeadsfinder;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +18,6 @@ public class VideoToFileWriter {
             writer.println("doubleclickLink: " + video.getDoubleclickLink() +  "\n");
             writer.println("ad system: " + video.getAdSystem() + "\n");
             writer.println("script: " + video.getTargetScriptString() + "\n");
-            ;
 
         }catch (IOException e){
             e.printStackTrace();

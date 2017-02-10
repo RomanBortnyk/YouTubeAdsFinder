@@ -1,4 +1,4 @@
-package youtubescrapper;
+package youtubeadsfinder;
 
 import java.util.ArrayList;
 

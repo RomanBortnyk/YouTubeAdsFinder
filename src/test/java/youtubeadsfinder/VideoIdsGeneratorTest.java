@@ -1,4 +1,4 @@
-package youtubescrapper;
+package youtubeadsfinder;
 
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class VideoIdsGeneratorTest {
     SearchQueriesGenerator searchQueriesGenerator = new SearchQueriesGenerator(3);
 
     @Test
-    public void generateStringTest() {
+    public void generate() {
 
         System.out.println(searchQueriesGenerator.generate());
         System.out.println(searchQueriesGenerator.generate());

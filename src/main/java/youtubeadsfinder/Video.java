@@ -1,10 +1,4 @@
-package youtubescrapper;
-
-import org.apache.commons.lang.StringEscapeUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
+package youtubeadsfinder;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
