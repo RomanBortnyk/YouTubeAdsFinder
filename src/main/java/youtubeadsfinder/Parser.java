@@ -38,14 +38,25 @@ public class Parser {
 
     }
 
-    public int getVideoDurationInSeconds(Video video){
+    public int getVideoDurationInSeconds(String url){
 
 
-        Document document = getDocument(video.getVideoUrl());
+        Document document;
+        Elements durationSpan = null;
+        boolean isSpanExist = false;
 
-        Elements durationSpan = document.getElementsByAttributeValue("itemprop", "duration");
+        while ( !isSpanExist ){
+
+            document = getDocument(url);
+            durationSpan = document.getElementsByAttributeValue("itemprop", "duration");
+
+            if ( !durationSpan.isEmpty() ) isSpanExist=true;
+        }
+
 
         String stringDuration = durationSpan.attr("content");
+
+        System.out.println(stringDuration);
 
         String time [] = stringDuration.split("M");
 
@@ -55,6 +66,7 @@ public class Parser {
 
         return minutes*60 + seconds;
     }
+
 
 
 

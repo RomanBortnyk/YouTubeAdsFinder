@@ -38,8 +38,17 @@ public class ParserTest {
     @Test
     public void getVideoDurationInSeconds (){
 
-        System.out.println(
-                (double)parser.getVideoDurationInSeconds(new Video("https://www.youtube.com/watch?v=Aqrm2K6phMU")) /3600 );
+        VideoLinkRepository repository = new VideoLinkRepository("AdLinks");
+
+        int commonDuration= 0;
+
+       for (String link: repository.getLinks()){
+
+           commonDuration+= parser.getVideoDurationInSeconds(link);
+           System.out.println("current duration " +(double)commonDuration/3600 + " hours");
+       }
+
+        System.out.println((double)commonDuration/3600+" hours");
 
 
     }
