@@ -6,6 +6,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -36,6 +37,26 @@ public class Parser {
 //        requestAdSystem(video);
 
     }
+
+    public int getVideoDurationInSeconds(Video video){
+
+
+        Document document = getDocument(video.getVideoUrl());
+
+        Elements durationSpan = document.getElementsByAttributeValue("itemprop", "duration");
+
+        String stringDuration = durationSpan.attr("content");
+
+        String time [] = stringDuration.split("M");
+
+        int minutes = Integer.parseInt(time[0].substring(2,time[0].length()) );
+
+        int seconds = Integer.parseInt( time[1].substring(0,time[1].length()-1) );
+
+        return minutes*60 + seconds;
+    }
+
+
 
 
     public String getAdLink (Video video){

@@ -16,6 +16,10 @@ public class Video {
     private String adUrl;
     private String adSystem;
     private String targetScriptString;
+    private int durationInSeconds;
+
+
+
 
     public String getTargetScriptString() {
         return targetScriptString;

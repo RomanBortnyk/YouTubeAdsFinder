@@ -1,5 +1,6 @@
 package youtubeadsfinder;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import javax.print.Doc;
@@ -10,6 +11,15 @@ import java.util.ArrayList;
  */
 public class ParserTest {
 
+    private static Parser parser;
+
+    @BeforeClass
+    public static void initialize (){
+
+        parser = new Parser();
+
+    }
+
     @Test
     public void parse(){
 
@@ -18,12 +28,19 @@ public class ParserTest {
 
         VideoToFileWriter writer = new VideoToFileWriter();
 
-        Parser parser = new Parser();
-
         Video video1 = new Video("https://www.youtube.com/watch?v=x559i-sS9oM");
         parser.parse(video1);
 
         System.out.println();
+
+    }
+
+    @Test
+    public void getVideoDurationInSeconds (){
+
+        System.out.println(
+                (double)parser.getVideoDurationInSeconds(new Video("https://www.youtube.com/watch?v=Aqrm2K6phMU")) /3600 );
+
 
     }
 }
