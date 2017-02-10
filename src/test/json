@@ -1,0 +1,59 @@
+{
+  "params": {
+    "allowfullscreen": "true",
+    "bgcolor": "#000000",
+    "allowscriptaccess": "always"
+  },
+  "attrs": {
+    "id": "movie_player"
+  },
+  "sts": 17199,
+  "html5": true,
+  "url": "https:\/\/s.ytimg.com\/yts\/swfbin\/player-vflq2wXk2\/watch_as3.swf",
+  "url_v8": "https:\/\/s.ytimg.com\/yts\/swfbin\/player-vflq2wXk2\/cps.swf",
+  "assets": {
+    "css": "\/yts\/cssbin\/www-player-webp-vflv5YY4Q.css",
+    "js": "\/yts\/jsbin\/player-uk_UA-vflC-sNvn\/base.js"
+  },
+  "messages": {
+    "player_fallback": [
+      "Для відтворення відео потрібен програвач Adobe Flash або веб-переглядач із підтримкою HTML5. \u003ca href=\"https:\/\/get.adobe.com\/flashplayer\/\"\u003eЗавантажити останню версію програвача Flash \u003c\/a\u003e \u003ca href=\"\/html5\"\u003eДокладніше про веб-переглядач із підтримкою HTML5\u003c\/a\u003e"
+    ]
+  },
+  "url_v9as2": "",
+  "min_version": "8.0.0",
+  "args": {
+    "midroll_freqcap": "420.0",
+    "cbr": "Chrome",
+    "caption_audio_tracks": "v=0\u0026i=0",
+    "user_gender": "m",
+    "length_seconds": "362",
+    "iurlhq_webp": "https:\/\/i.ytimg.com\/vi_webp\/H6OZVubhYzI\/hqdefault.webp",
+    "ssl": "1",
+    "thumbnail_url": "https:\/\/i.ytimg.com\/vi\/H6OZVubhYzI\/default.jpg",
+    "host_language": "uk",
+    "iv_module": "https:\/\/s.ytimg.com\/yts\/swfbin\/player-vflq2wXk2\/iv_module.swf",
+    "account_playback_token": "QUFFLUhqbmstRWNSRzVPOEI1bEJBMlVIY2NNaUFXdFFvd3xBQ3Jtc0tsbzMxbjNIV2hQUXRhRzYyTGoxVFpGRHJfNUNya05Bem9PRDU5Zk9qWlh2RXpqdk9nT1p2a0xoZHZUTGRtRWpCY2VqZ0NERmltMklEVTBYS096dTVlTkxwTEZWRkVCVGxEOGhJZHZEcHk1T0QyWGVLWQ==",
+    "loeid": "9422596,9428398,9431012,9433221,9434289,9434317,9434905,9437553,9439580,9446054,9451827,9454899,9454909,9457114,9457494,9458240,9459158,9460072,9461498",
+    "iv_endscreen_url": "\/\/www.youtube.com\/get_endscreen?v=H6OZVubhYzI\u0026client=1\u0026ei=5tGdWPuPB4-QW5STnJgD",
+    "hl": "uk_UA",
+    "gpt_migration": "1",
+    "fade_in_duration_milliseconds": "1000",
+    "ad_flags": "0",
+    "fmt_list": "22\/1280x720\/9\/0\/115,43\/640x360\/99\/0\/0,18\/640x360\/9\/0\/115,36\/320x180\/99\/1\/0,17\/176x144\/99\/1\/0",
+    "atc": "a=3\u0026b=H_ovuCXuCVzEPRkPNZlsesYTH_A\u0026c=1486737894\u0026d=1\u0026e=H6OZVubhYzI\u0026c3a=14\u0026c1a=1\u0026c6a=1\u0026hh=hVAPacnEm8djX-eKsHanHS84OY8",
+    "iv3_module": "1",
+    "adsense_video_doc_id": "yt_H6OZVubhYzI",
+    "pltype": "content",
+    "ad_tag": "https:\/\/pubads.g.doubleclick.net\/gampad\/ads?ad_rule=0\u0026avo=AF-6KjIdt2UdN1r4sQrbd30dGgw8-ayeOI3yKiaB6yvKyNa5qlnLUqaQ9KyFX_O6d9tPEqBbu4Wqp420GjDEfR6aGiZbS8CUr__f0JbLpM5YFXpk7-I9ljs\u0026ciu_szs=300x250,300x60\u0026env=vp\u0026gdfp_req=1\u0026iu=\/4061\/com.ytpwatch.howtoanddiy\u0026loeid=9433221,9451827,9457141,9457494\u0026osd=2\u0026output=xml_vast3\u0026scor=1\u0026scp=av%3D1%26kpeid%3Dpfi2LbSr7aGNT6f44TgqHw%26kpid%3D16583407%26kvid%3DH6OZVubhYzI%26mpvid%3DIeuDaQxIJL2Cy1yx%26ssl%3D1%26afv%3D1%26dbp%3DChYzSzVZWXR4bUU5NVZDLXd2SUwyYXFBEAEgASgA%26dc_yt%3D1%26excl_cat%3D16583407%26k2%3D18,68,124,987%26k18%3D1%26k21%3D1%26k5%3D18_68_124_987%26kage%3D31%26kar%3D4%26kauth%3D1%26kclg%3D1%26kclt%3D1%26kga%3D1002%26kgender%3Dm%26kgg%3D1%26kgpt%3D1%26klg%3Duk%26kmyd%3Dwatch-longform-ad%26ko%3Dp%26kpco%3D6299279%26kr%3DN%26kvlg%3Dru%26kvz%3D203%26nlfb%3D1%26p13_rm%3D1%26pos%3Dpre%26yt3pav%3D1%26ytcat%3D26%26ytdevice%3D1%26ytdevicever%3D1.20170206%26ytexp%3D9422596,9428398,9431012,9433221,9434289,9434317,9434905,9437553,9439580,9446054,9451827,9454899,9454909,9457114,9457494,9458240,9459158,9460072,9461498%26yt_ec%3D9%26yt_ec2%3D9%26yt_vrallowed%3D1%26yt_viral%3D1\u0026sdki=18803DED\u0026sz=480x361%7C480x70\u0026unviewed_position_start=1\u0026vid=H6OZVubhYzI\u0026vpos=preroll\u0026ytdevice=1\u0026yt_pt=APb3F28Dgj6KTyBu0NYv_syyw0OOozknz7eO_vl8wMjdJiVVQ3LTdwCOHa-YbaZa0yvpQi0Z3Ji_9es0g8LTikN1DyAwG8ct6fY2n15SOIyAfYd4jorbAr0CALS4XMgR9JwEVf-0JN-mFtMGtzQZsirzwBQCuGQiYo8QIfRp7UGgfX62Bl8SSqd5J2t270C9pFch2Dh82rl6J5-fI1CiQnKYfHfuIEHMY5WKn-zSu90D7tx2hp2xIIlad1WI1VRuci0wu2K27dPVaYldvCryGKfQxHIqrdrqzYywAub8U2UUArhUk_3YYepprmPEnlkeGWtTCiDbBs3nKtmmyJ4upqEpnDe0XaZdtgLMSoslrUOVWOTJSbSNRw0gLWbtXC3w0G2Cv5pgo7dAOOZlrOXBYhjy1CWd_B4y28t4DTWUu4n1uw5qkL17xKRMXWROchR8RAhbtTuhoKDC5J0wVxG6F3DS20jrOy8e9T0IX2xslehu41tLUEWJka1dpnlO8-P2PhsAvQ7U2m2s1JNPZ26lUdI74Wxw79kQdoxhEresK7LWSm6jbe2M1bspj9GyjsvmphNTbbVXEetT19UzeSDDvZRcc6kf-TOsxmh1X9zH3mqwg2ynn1PJc4NkAPyS4bnAYVXSsL2lcd_DmNE5uoBh9NUW5q1HlFwxB3xB4S4k7Ei6WKCmMEg9wy-C30rFyoVZ2A6lZwFTNhiDkMCqlGs9wIjktA4bnY0_am7fy1YbwQwgqLd1-T3u1fmMDHgNvQDPnAeahb67Tftr7BfyQvbOs9pZTJHbTR_8ix_uYUrHs-CSmReuFRwHXqOqVwmZ4Y9O37CdVzPRiBAbxhdw0oe9vxkoRWRQGUeo-eQhCVt0KqCJ5ykEpw1q-iJE4PeU3B1kTlrV08AtR4lKJhnp3quZDDK4RQOz-d9Sp9QV0HTjecpcbdHKJQjqq_PJmoHHV0M",
+    "cr": "UA",
+    "ptchn": "pfi2LbSr7aGNT6f44TgqHw",
+    "focEnabled": "1",
+    "cl": "146978537",
+    "tag_for_child_directed": false,
+    "player_error_log_fraction": "1.0",
+    "allow_html5_ads": "1",
+    "allow_ratings": "1",
+    "url_encoded_fmt_stream_map": "type=video%2Fmp4%3B+codecs%3D%22avc1.64001F%2C+mp4a.40.2%22\u0026quality=hd720\u0026itag=22\u0026url=https%3A%2F%2Fr4---sn-f5f7ln7e.googlevideo.com%2Fvideoplayback%3Fmime%3Dvideo%252Fmp4%26ms%3Dau%26signature%3D28DE783E62AAECF29EB7AB6147A9ED9068EE54A9.191D09E4D0013613ED15A45C4E055E3B1638AE76%26source%3Dyoutube%26mv%3Dm%26initcwndbps%3D268750%26id%3Do-AKpW_H21b9mP4lbH-4BUCAAPGWCnjmszHf6FMOMgxeMg%26pl%3D24%26dur%3D361.952%26itag%3D22%26mm%3D31%26ip%3D95.132.134.143%26mn%3Dsn-f5f7ln7e%26ratebypass%3Dyes%26ipbits%3D0%26mt%3D1486737868%26key%3Dyt6%26sparams%3Ddur%252Cei%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26requiressl%3Dyes%26expire%3D1486759494%26ei%3D5tGdWPuPB4-QW5STnJgD%26upn%3DbwHkCPwjolI%26lmt%3D1473568858561621,type=video%2Fwebm%3B+codecs%3D%22vp8.0%2C+vorbis%22\u0026quality=medium\u0026itag=43\u0026url=https%3A%2F%2Fr4---sn-f5f7ln7e.googlevideo.com%2Fvideoplayback%3Fmime%3Dvideo%252Fwebm%26ms%3Dau%26signature%3D87DA65DB0FA0696D83800F037E45FCB1F70933E4.949E6A4FC9653D21C3CF0F0616845391D4B59640%26source%3Dyoutube%26mv%3Dm%26initcwndbps%3D268750%26id%3Do-AKpW_H21b9mP4lbH-4BUCAAPGWCnjmszHf6FMOMgxeMg%26pl%3D24%26dur%3D0.000%26itag%3D43%26mm%3D31%26ip%3D95.132.134.143%26mn%3Dsn-f5f7ln7e%26ratebypass%3Dyes%26ipbits%3D0%26mt%3D1486737868%26clen%3D35496394%26key%3Dyt6%26gir%3Dyes%26sparams%3Dclen%252Cdur%252Cei%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26requiressl%3Dyes%26expire%3D1486759494%26ei%3D5tGdWPuPB4-QW5STnJgD%26upn%3DbwHkCPwjolI%26lmt%3D1473414317824055,type=video%2Fmp4%3B+codecs%3D%22avc1.42001E%2C+mp4a.40.2%22\u0026quality=medium\u0026itag=18\u0026url=https%3A%2F%2Fr4---sn-f5f7ln7e.googlevideo.com%2Fvideoplayback%3Fmime%3Dvideo%252Fmp4%26ms%3Dau%26signature%3D9F18E5F1E6F58A9B2A3F89D29A9368B5D5EC6D27.D33904AD66448267FF1E2B920375171296AD6B46%26source%3Dyoutube%26mv%3Dm%26initcwndbps%3D268750%26id%3Do-AKpW_H21b9mP4lbH-4BUCAAPGWCnjmszHf6FMOMgxeMg%26pl%3D24%26dur%3D361.952%26itag%3D18%26mm%3D31%26ip%3D95.132.134.143%26mn%3Dsn-f5f7ln7e%26ratebypass%3Dyes%26ipbits%3D0%26mt%3D1486737868%26clen%3D27824252%26key%3Dyt6%26gir%3Dyes%26sparams%3Dclen%252Cdur%252Cei%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26requiressl%3Dyes%26expire%3D1486759494%26ei%3D5tGdWPuPB4-QW5STnJgD%26upn%3DbwHkCPwjolI%26lmt%3D1473568141828126,type=video%2F3gpp%3B+codecs%3D%22mp4v.20.3%2C+mp4a.40.2%22\u0026quality=small\u0026itag=36\u0026url=https%3A%2F%2Fr4---sn-f5f7ln7e.googlevideo.com%2Fvideoplayback%3Fmime%3Dvideo%252F3gpp%26ms%3Dau%26signature%3D4F8688FE671F3EF410AFD53E4CB05642C9114FB3.2A9750678F94F6D44F82913D25A7700E0065258E%26source%3Dyoutube%26mv%3Dm%26initcwndbps%3D268750%26id%3Do-AKpW_H21b9mP4lbH-4BUCAAPGWCnjmszHf6FMOMgxeMg%26pl%3D24%26dur%3D361.999%26itag%3D36%26mm%3D31%26ip%3D95.132.134.143%26mn%3Dsn-f5f7ln7e%26ipbits%3D0%26mt%3D1486737868%26clen%3D10036651%26key%3Dyt6%26gir%3Dyes%26sparams%3Dclen%252Cdur%252Cei%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26requiressl%3Dyes%26expire%3D1486759494%26ei%3D5tGdWPuPB4-QW5STnJgD%26upn%3DbwHkCPwjolI%26lmt%3D1473405942504326,type=video%2F3gpp%3B+codecs%3D%22mp4v.20.3%2C+mp4a.40.2%22\u0026quality=small\u0026itag=17\u0026url=https%3A%2F%2Fr4---sn-f5f7ln7e.googlevideo.com%2Fvideoplayback%3Fmime%3Dvideo%252F3gpp%26ms%3Dau%26signature%3DC8661693E28DFF38BD3D89740EEA40CAB7047F0D.3C6608BD821F6F55C4173990DF5B361501A63FC0%26source%3Dyoutube%26mv%3Dm%26initcwndbps%3D268750%26id%3Do-AKpW_H21b9mP4lbH-4BUCAAPGWCnjmszHf6FMOMgxeMg%26pl%3D24%26dur%3D361.999%26itag%3D17%26mm%3D31%26ip%3D95.132.134.143%26mn%3Dsn-f5f7ln7e%26ipbits%3D0%26mt%3D1486737868%26clen%3D3636393%26key%3Dyt6%26gir%3Dyes%26sparams%3Dclen%252Cdur%252Cei%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26requiressl%3Dyes%26expire%3D1486759494%26ei%3D5tGdWPuPB4-QW5STnJgD%26upn%3DbwHkCPwjolI%26lmt%3D1473405935677199",
+    "csi_page_type": "watch,watch7ad_html5",
+    "vmap": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\u003cvmap:VMAP xmlns:vmap=\"http:\/\/www.iab.net\/videosuite\/vmap\" xmlns:yt=\"http:\/\/youtube.com\" version=\"1.0\"\u003e\u003cvmap:AdBreak breakType=\"linear\" timeOffset=\"start\"\u003e\u003cvmap:AdSource allowMultipleAds = \"false\"\u003e\u003cvmap:VASTData\u003e\u003cVAST version=\"3.0\"\u003e\u003cAd\u003e\u003cWrapper\u003e\u003cAdSystem version=\"1\"\u003eYT:DoubleClick\u003c\/AdSystem\u003e\u003cVASTAdTagURI\u003e\u003c![CDATA[https:\/\/pubads.g.doubleclick.net\/gampad\/ads?ad_rule=0\u0026avo=AF-6KjIdt2UdN1r4sQrbd30dGgw8-ayeOI3yKiaB6yvKyNa5qlnLUqaQ9KyFX_O6d9tPEqBbu4Wqp420GjDEfR6aGiZbS8CUr__f0JbLpM5YFXpk7-I9ljs\u0026ciu_szs=300x250,300x60\u0026correlator=1486737894305\u0026env=vp\u0026gdfp_req=1\u0026iu=\/4061\/com.ytpwatch.howtoanddiy\u0026loeid=9433221,9451827,9457141,9457494\u0026osd=2\u0026output=xml_vast3\u0026scor=1\u0026scp=av%3…
