@@ -14,17 +14,16 @@ import java.util.ArrayList;
 public class VideoLinksGenerator {
 
     private SearchQueriesGenerator queriesGenerator;
-    private int numberOfLinks;
     private String pattern = "https://www.youtube.com";
 
-    public VideoLinksGenerator(int numberOfLinks) {
+    public VideoLinksGenerator() {
 
-        this.numberOfLinks = numberOfLinks;
+
         queriesGenerator = new SearchQueriesGenerator(3);
 
     }
 
-    public ArrayList<String> generate (){
+    public ArrayList<String> generate (int numberOfLinks){
 
         ArrayList<String> randomLinks = new ArrayList<>();
 

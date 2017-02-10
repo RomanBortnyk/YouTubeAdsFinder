@@ -14,11 +14,17 @@ import java.util.ArrayList;
  */
 public class SeleniumSearcher {
 
-    public void search(){
+    private VideoLinksGenerator generator;
 
-        VideoLinksGenerator generator = new VideoLinksGenerator(500);
+    public SeleniumSearcher (){
 
-        ArrayList<String> links = generator.generate();
+        generator = new VideoLinksGenerator();
+
+    }
+
+    public void search(int count){
+
+        ArrayList<String> links = generator.generate(count);
 
         System.setProperty("webdriver.chrome.driver", "chromedriver");
 

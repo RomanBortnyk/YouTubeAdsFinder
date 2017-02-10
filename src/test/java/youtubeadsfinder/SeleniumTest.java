@@ -17,9 +17,9 @@ import java.util.concurrent.TimeUnit;
 public class SeleniumTest {
 
     @Test
-    public void test () throws Exception{
+    public void test () throws Exception {
 
-
+    }
 
 
 
