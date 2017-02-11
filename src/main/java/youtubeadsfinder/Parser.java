@@ -7,6 +7,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -22,23 +23,9 @@ import java.util.regex.Pattern;
 @Component
 public class Parser {
 
+    @Autowired
     private Proxy proxy;
 
-    public Parser() {
-
-//        this.proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("96.239.193.243"	,8080) );
-//        this.proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("158.69.201.48",80) );
-
-    }
-
-    public void parse(Video video) {
-
-        getScriptStringWithAdTag(video);
-        createDoubleClickLink(video);
-
-//        requestAdSystem(video);
-
-    }
 
     public int getVideoDurationInSeconds(String url){
 
@@ -69,94 +56,6 @@ public class Parser {
         return minutes*60 + seconds;
     }
 
-
-
-
-
-    public String getAdLink (Video video){
-
-        Document document = getDocument(video.getVideoUrl());
-
-        Element reference = document.getElementById("bottom-bar-link");
-
-        String link = null;
-
-        if (reference !=null){
-            link = reference.attr("href");
-            System.out.println("video " +video.getVideoUrl()+ "has ad link: " +link );
-        }else {
-            System.out.println("video " +video.getVideoUrl()+ " link not found" );
-        }
-
-        System.out.println(" ");
-
-        return link;
-    }
-
-    private void getScriptStringWithAdTag(Video video) {
-
-        Document doc = getDocument(video.getVideoUrl());
-
-        if ( doc == null) return;
-
-        // div where target script is located
-        Element div = doc.getElementById("player-mole-container");
-
-        Node targetScript = div.childNode(7);
-
-        video.setTargetScriptString(targetScript.toString());
-
-    }
-
-    private void createDoubleClickLink(Video video) {
-
-        // "ad_tag":"some ad_tag info"
-        Pattern p = Pattern.compile("(?is)\"ad_tag\":\"(.+?)\"");
-
-        if (video.getTargetScriptString() == null) return;
-
-        Matcher matcher = p.matcher(video.getTargetScriptString());
-
-        String doubleclickLink = null;
-
-        if (matcher.find()) {
-
-            doubleclickLink = matcher.group(1);
-
-            video.setDoubleclickLink(unescapeString(doubleclickLink));
-
-        } else {
-//            System.out.println("video " + videoUrl + " has not ad_tag");
-        }
-
-        p = Pattern.compile("(?is)\"tpas_partner_id\":\"(.+?)\"");
-        matcher = p.matcher(video.getTargetScriptString());
-
-        if (matcher.find()) {
-            System.out.println("video: " + video.getVideoUrl() + "partner id: " + matcher.group(1));
-        }
-    }
-
-    private void requestAdSystem(Video video) {
-
-
-        if (video.getDoubleclickLink() == null) return;
-
-        Document xml = getDocument(video.getDoubleclickLink());
-
-        if (xml == null) return;
-
-        Element adSystem = xml.getElementsByTag("AdSystem").first();
-
-        if (adSystem == null) {
-            System.out.println("video adSystemTag is null");
-            return;
-        }
-
-        video.setAdSystem(adSystem.text());
-
-
-    }
 
     public Document getDocument(String url) {
 
@@ -194,8 +93,8 @@ public class Parser {
 
     }
 
-    public String unescapeString(String incoming) {
-        return StringEscapeUtils.unescapeJava(incoming);
-    }
+//    public String unescapeString(String incoming) {
+//        return StringEscapeUtils.unescapeJava(incoming);
+//    }
 
 }

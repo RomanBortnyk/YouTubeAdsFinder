@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by romanb on 2/10/17.
  */
-@Component
+
 public class StringToFileAppender {
 
     private String path;
@@ -22,7 +22,7 @@ public class StringToFileAppender {
 
     public void appendString(String string){
 
-        File file = new File("AdLinks.txt");
+        File file = new File(path);
 
         try (FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
              BufferedWriter bw = new BufferedWriter(fw)) {

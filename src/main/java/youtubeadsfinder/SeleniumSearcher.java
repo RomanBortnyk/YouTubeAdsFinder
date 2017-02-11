@@ -6,6 +6,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import youtubeadsfinder.generators.VideoLinksGenerator;
 import youtubeadsfinder.repositories.FoundVideoLinksRepository;
@@ -18,32 +19,23 @@ import java.util.ArrayList;
 @Component
 public class SeleniumSearcher {
 
+    @Autowired
     private VideoLinksGenerator generator;
+    @Autowired
     private StringToFileAppender appender;
+    @Autowired
     private FoundVideoLinksRepository repository;
 
-    public SeleniumSearcher (){
+    @Autowired
+    private WebDriver driver;
 
-        generator = new VideoLinksGenerator();
-        appender = new StringToFileAppender("AdLinks");
-        repository = new FoundVideoLinksRepository("/home/romanb/Desktop/AdLinksReserve");
+    @Autowired
+    private WebDriverWait wait;
 
-    }
 
     public void search(int count){
 
         ArrayList<String> links = generator.generate(count);
-
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
-
-        WebDriver driver = new ChromeDriver(addProxyCapabilities());
-//        WebDriver driver = new ChromeDriver();
-
-        long timeOutInSeconds = 6;
-
-//        driver.manage().timeouts().pageLoadTimeout(timeOutInSeconds,TimeUnit.SECONDS);
-
-        WebDriverWait wait = new WebDriverWait(driver, (int)timeOutInSeconds);
 
         for (int i = 0; i < links.size() ; i++) {
 
@@ -56,7 +48,6 @@ public class SeleniumSearcher {
 
                 WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("a[data-sessionlink='feature=player-title']")));
 
-//                WebElement element = driver.findElement(By.cssSelector("a[data-sessionlink='feature=player-title']"));
 
                 String href = element.getAttribute("href");
 
@@ -100,32 +91,4 @@ public class SeleniumSearcher {
 
     }
 
-    private DesiredCapabilities addProxyCapabilities() {
-        Proxy proxy = new Proxy();
-        proxy.setProxyType(Proxy.ProxyType.MANUAL);
-
-        //uk 3s/video
-        proxy.setHttpProxy("217.33.216.114:8080");
-        proxy.setSslProxy("217.33.216.114:8080");
-//
-//         7s/video
-//        proxy.setHttpProxy("103.196.182.118:28425");
-//        proxy.setSslProxy("103.196.182.118:28425");
-
-        // 4-5s/video also good proxy
-//        proxy.setHttpProxy("35.162.177.140:8083");
-//        proxy.setSslProxy("35.162.177.140:8083");
-
-
-
-
-        DesiredCapabilities capability = new DesiredCapabilities();
-
-        capability.setCapability(CapabilityType.PROXY, proxy);
-        capability.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-
-
-        return capability;
-
-    }
 }

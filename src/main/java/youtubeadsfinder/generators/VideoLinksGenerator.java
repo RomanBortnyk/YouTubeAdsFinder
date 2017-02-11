@@ -4,7 +4,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import youtubeadsfinder.Parser;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,15 +17,13 @@ import java.util.ArrayList;
 @Component
 public class VideoLinksGenerator {
 
+    @Autowired
     private SearchQueriesGenerator queriesGenerator;
+    @Autowired
+    private Parser parser;
+
     private String pattern = "https://www.youtube.com";
 
-    public VideoLinksGenerator() {
-
-
-        queriesGenerator = new SearchQueriesGenerator(3);
-
-    }
 
 //    String a = "6&nbsp;136&nbsp";
     public long getIntViewsNumber (String string){
@@ -44,7 +44,6 @@ public class VideoLinksGenerator {
     }
 
 
-
     public ArrayList<String> generate (int numberOfLinks){
 
         ArrayList<String> randomLinks = new ArrayList<>();
@@ -56,7 +55,7 @@ public class VideoLinksGenerator {
 
             try {
 
-                Document doc = Jsoup.connect(  queriesGenerator.generate() ).get();
+                Document doc = parser.getDocument(queriesGenerator.generate());
                 Elements results = doc.getElementsByClass("yt-lockup-content");
 
                 Node nodeWithHref;
@@ -97,9 +96,6 @@ public class VideoLinksGenerator {
 
                 }
 
-            }catch (IOException e){
-                System.out.println("Error while generate random links");
-                e.printStackTrace();
             }catch (IndexOutOfBoundsException e){
                 System.out.println("this stupid index of bound again");
             }
@@ -108,8 +104,5 @@ public class VideoLinksGenerator {
 
         return randomLinks;
     }
-
-
-
 
 }

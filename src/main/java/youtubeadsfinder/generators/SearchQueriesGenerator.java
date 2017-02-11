@@ -1,5 +1,6 @@
 package youtubeadsfinder.generators;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -7,16 +8,16 @@ import java.util.Random;
 /**
  * Created by romanb on 2/7/17.
  */
-@Component
+
 public class SearchQueriesGenerator {
 
     private String searchUrl = "https://www.youtube.com/results?search_query=";
+    @Autowired
     private Random random;
     private int length;
 
-    public SearchQueriesGenerator(int length) {
-        this.random = new Random();
-        this.length = length;
+    public SearchQueriesGenerator(int searchQueryLength) {
+        this.length = searchQueryLength;
     }
 
     public String generate (){

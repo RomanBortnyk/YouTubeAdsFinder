@@ -18,20 +18,6 @@ public class ParserTest {
 
     }
 
-    @Test
-    public void parse(){
-
-//        VideoLinksGenerator linksGenerator = new VideoLinksGenerator(10);
-//        ArrayList<String> links = linksGenerator.generate();
-
-        VideoToFileWriter writer = new VideoToFileWriter();
-
-        Video video1 = new Video("https://www.youtube.com/watch?v=x559i-sS9oM");
-        parser.parse(video1);
-
-        System.out.println();
-
-    }
 
     @Test
     public void getVideoDurationInSeconds (){
