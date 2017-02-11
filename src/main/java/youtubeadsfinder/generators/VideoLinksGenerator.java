@@ -1,9 +1,10 @@
-package youtubeadsfinder;
+package youtubeadsfinder.generators;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 /**
  * Created by romanb on 2/7/17.
  */
+@Component
 public class VideoLinksGenerator {
 
     private SearchQueriesGenerator queriesGenerator;
@@ -24,7 +26,7 @@ public class VideoLinksGenerator {
     }
 
 //    String a = "6&nbsp;136&nbsp";
-    public int getIntViewsNumber (String string){
+    public long getIntViewsNumber (String string){
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -33,11 +35,12 @@ public class VideoLinksGenerator {
             if (Character.isDigit(curr)) stringBuilder.append(curr);
         }
 
-        if (stringBuilder.toString().equals("")){
+        if (stringBuilder.toString().equals("") ){
             return 1;
         }
 
-        return Integer.parseInt(stringBuilder.toString());
+
+        return Long.parseLong(stringBuilder.toString());
     }
 
 
@@ -47,6 +50,7 @@ public class VideoLinksGenerator {
         ArrayList<String> randomLinks = new ArrayList<>();
 
         boolean isEnough = false;
+        int count = 1;
 
         while ( !isEnough ){
 
@@ -82,10 +86,11 @@ public class VideoLinksGenerator {
                             break;
                         }
 
-                        if ( getIntViewsNumber(viewsNumberString) >=100000){
+                        if ( getIntViewsNumber(viewsNumberString) >=400000){
 
                             randomLinks.add(pattern+href);
-                            System.out.println(pattern+href);
+                            System.out.println(count +". "+pattern+href);
+                            count++;
                         }
 
                     }
@@ -95,6 +100,8 @@ public class VideoLinksGenerator {
             }catch (IOException e){
                 System.out.println("Error while generate random links");
                 e.printStackTrace();
+            }catch (IndexOutOfBoundsException e){
+                System.out.println("this stupid index of bound again");
             }
 
         }

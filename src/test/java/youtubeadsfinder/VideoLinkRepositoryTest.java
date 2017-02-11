@@ -1,6 +1,7 @@
 package youtubeadsfinder;
 
 import org.junit.Test;
+import youtubeadsfinder.repositories.FoundVideoLinksRepository;
 
 import java.util.ArrayList;
 
@@ -17,7 +18,7 @@ public class VideoLinkRepositoryTest {
     @Test
     public void isExist() throws Exception {
 
-        VideoLinksRepository repository = new VideoLinksRepository("/home/romanb/Desktop/AdLinksReserve");
+        FoundVideoLinksRepository repository = new FoundVideoLinksRepository("/home/romanb/Desktop/AdLinksReserve");
 
         ArrayList<String> test = repository.getLinks();
 

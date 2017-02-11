@@ -1,10 +1,13 @@
-package youtubeadsfinder;
+package youtubeadsfinder.generators;
+
+import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
 /**
  * Created by romanb on 2/7/17.
  */
+@Component
 public class SearchQueriesGenerator {
 
     private String searchUrl = "https://www.youtube.com/results?search_query=";

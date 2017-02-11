@@ -1,5 +1,7 @@
 package youtubeadsfinder;
 
+import org.springframework.stereotype.Component;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -8,6 +10,7 @@ import java.io.IOException;
 /**
  * Created by romanb on 2/10/17.
  */
+@Component
 public class StringToFileAppender {
 
     private String path;

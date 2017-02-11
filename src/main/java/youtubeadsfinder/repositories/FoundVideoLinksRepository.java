@@ -1,4 +1,4 @@
-package youtubeadsfinder;
+package youtubeadsfinder.repositories;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,13 +8,13 @@ import java.util.ArrayList;
 /**
  * Created by romanb on 2/10/17.
  */
-public class VideoLinksRepository {
+public class FoundVideoLinksRepository {
 
     private ArrayList<String> links;
     private String pathToFile;
 
 
-    public VideoLinksRepository(String pathToFile){
+    public FoundVideoLinksRepository(String pathToFile){
 
         this.pathToFile = pathToFile;
         links= new ArrayList<>();

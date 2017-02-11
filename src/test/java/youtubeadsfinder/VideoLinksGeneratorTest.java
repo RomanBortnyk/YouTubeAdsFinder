@@ -1,8 +1,7 @@
 package youtubeadsfinder;
 
 import org.junit.Test;
-
-import java.util.ArrayList;
+import youtubeadsfinder.generators.VideoLinksGenerator;
 
 /**
  * Created by romanb on 2/7/17.

@@ -1,11 +1,14 @@
 package youtubeadsfinder;
 
+import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
  * Created by romanb on 2/7/17.
  */
+@Component
 public class VideoToFileWriter {
 
 

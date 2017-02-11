@@ -6,23 +6,27 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.stereotype.Component;
+import youtubeadsfinder.generators.VideoLinksGenerator;
+import youtubeadsfinder.repositories.FoundVideoLinksRepository;
 
 import java.util.ArrayList;
 
 /**
  * Created by romanb on 2/10/17.
  */
+@Component
 public class SeleniumSearcher {
 
     private VideoLinksGenerator generator;
     private StringToFileAppender appender;
-    private VideoLinksRepository repository;
+    private FoundVideoLinksRepository repository;
 
     public SeleniumSearcher (){
 
         generator = new VideoLinksGenerator();
         appender = new StringToFileAppender("AdLinks");
-        repository = new VideoLinksRepository("/home/romanb/Desktop/AdLinksReserve");
+        repository = new FoundVideoLinksRepository("/home/romanb/Desktop/AdLinksReserve");
 
     }
 
@@ -59,7 +63,7 @@ public class SeleniumSearcher {
 
                 if ( href != null && href.equals(currentLink)){
 
-                    System.out.println(log + "ad is abcent");
+                    System.out.println(log + "has no ad");
 
                 }else {
 
@@ -100,15 +104,19 @@ public class SeleniumSearcher {
         Proxy proxy = new Proxy();
         proxy.setProxyType(Proxy.ProxyType.MANUAL);
 
-        //uk 20+ ads
+        //uk 3s/video
         proxy.setHttpProxy("217.33.216.114:8080");
         proxy.setSslProxy("217.33.216.114:8080");
+//
+//         7s/video
+//        proxy.setHttpProxy("103.196.182.118:28425");
+//        proxy.setSslProxy("103.196.182.118:28425");
 
-//        proxy.setHttpProxy("208.75.95.148:80");
-//        proxy.setSslProxy("208.75.95.148:80");
+        // 4-5s/video also good proxy
+//        proxy.setHttpProxy("35.162.177.140:8083");
+//        proxy.setSslProxy("35.162.177.140:8083");
 
-        // us elite
-//        208.75.95.148	80
+
 
 
         DesiredCapabilities capability = new DesiredCapabilities();

@@ -1,6 +1,7 @@
 package youtubeadsfinder;
 
 import org.junit.Test;
+import youtubeadsfinder.generators.SearchQueriesGenerator;
 
 /**
  * Created by romanb on 2/7/17.

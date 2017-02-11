@@ -11,6 +11,6 @@ public class App {
 
         SeleniumSearcher searcher = new SeleniumSearcher();
 
-        searcher.search(200);
+        searcher.search(3000);
     }
 }

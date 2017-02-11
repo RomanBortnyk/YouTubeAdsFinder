@@ -19,8 +19,6 @@ public class Video {
     private int durationInSeconds;
 
 
-
-
     public String getTargetScriptString() {
         return targetScriptString;
     }
