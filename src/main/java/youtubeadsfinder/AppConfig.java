@@ -71,7 +71,7 @@ public class AppConfig {
     }
 
     @Bean
-    private DesiredCapabilities proxyCapabilities() {
+    public DesiredCapabilities proxyCapabilities() {
         org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
         proxy.setProxyType(org.openqa.selenium.Proxy.ProxyType.MANUAL);
 

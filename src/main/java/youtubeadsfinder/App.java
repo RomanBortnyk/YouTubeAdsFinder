@@ -1,5 +1,8 @@
 package youtubeadsfinder;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.util.ArrayList;
 
 /**
@@ -7,10 +10,13 @@ import java.util.ArrayList;
  */
 public class App {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
-        SeleniumSearcher searcher = new SeleniumSearcher();
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        searcher.search(3000);
+
+        SeleniumSearcher searcher = (SeleniumSearcher) applicationContext.getBean("seleniumSearcher");
+
+        searcher.search(20);
     }
 }
