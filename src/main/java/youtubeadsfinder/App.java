@@ -17,6 +17,6 @@ public class App {
 
         SeleniumSearcher searcher = (SeleniumSearcher) applicationContext.getBean("seleniumSearcher");
 
-        searcher.search(20);
+        searcher.search(1000);
     }
 }

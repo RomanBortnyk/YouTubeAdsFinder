@@ -7,6 +7,7 @@ import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import youtubeadsfinder.Parser;
+import youtubeadsfinder.repositories.GeneratedLinksRepository;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,34 +23,17 @@ public class VideoLinksGenerator {
     @Autowired
     private Parser parser;
 
+    @Autowired
+    private GeneratedLinksRepository repository;
+
     private String pattern = "https://www.youtube.com";
 
-
-//    String a = "6&nbsp;136&nbsp";
-    public long getIntViewsNumber (String string){
-
-        StringBuilder stringBuilder = new StringBuilder();
-
-        for (int i = 0; i <string.length() ; i++) {
-            char curr = string.charAt(i);
-            if (Character.isDigit(curr)) stringBuilder.append(curr);
-        }
-
-        if (stringBuilder.toString().equals("") ){
-            return 1;
-        }
-
-
-        return Long.parseLong(stringBuilder.toString());
-    }
-
-
-    public ArrayList<String> generate (int numberOfLinks){
-
-        ArrayList<String> randomLinks = new ArrayList<>();
+    public void generate (int numberOfLinks){
 
         boolean isEnough = false;
-        int count = 1;
+        int counter = 0;
+
+        System.out.println("generation of new "+numberOfLinks+" video links...");
 
         while ( !isEnough ){
 
@@ -63,12 +47,10 @@ public class VideoLinksGenerator {
                 String href;
                 String viewsNumberString = null;
 
-
                 for (int i = 0; i <results.size() ; i++) {
 
                     nodeWithHref = results.get(i).childNode(0).childNode(0);
                     href = nodeWithHref.attr("href");
-
 
                    // if href like example below it means that it's video - not a channel
                     // /watch?v=hnBN2wgi8Ak
@@ -77,32 +59,43 @@ public class VideoLinksGenerator {
                         nodeWithMetaData = results.get(i).childNode(2);
                         if (nodeWithMetaData.childNodeSize()>=1){
                             viewsNumberString = nodeWithMetaData.childNode(0).childNode(1).toString();
-
                         }
 
-                        if (randomLinks.size() == numberOfLinks){
+                        if (counter == numberOfLinks){
                             isEnough = true;
                             break;
                         }
 
                         if ( getIntViewsNumber(viewsNumberString) >=400000){
-
-                            randomLinks.add(pattern+href);
-                            System.out.println(count +". "+pattern+href);
-                            count++;
+                            repository.add(pattern+href);
+//                            System.out.println(counter +". "+pattern+href);
+                            counter++;
                         }
-
                     }
-
                 }
 
             }catch (IndexOutOfBoundsException e){
                 System.out.println("this stupid index of bound again");
             }
-
         }
-
-        return randomLinks;
     }
 
+    //    String a = "6&nbsp;136&nbsp";
+    private long getIntViewsNumber (String string){
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i = 0; i <string.length() ; i++) {
+            char curr = string.charAt(i);
+            if (Character.isDigit(curr)) stringBuilder.append(curr);
+        }
+
+        if (stringBuilder.toString().equals("") ){
+            return 1;
+        }
+
+        return Long.parseLong(stringBuilder.toString());
+    }
 }
+
+

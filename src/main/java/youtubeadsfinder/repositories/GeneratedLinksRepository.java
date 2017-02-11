@@ -12,6 +12,10 @@ public class GeneratedLinksRepository {
 
     private ArrayList<String> links;
 
+    public GeneratedLinksRepository(){
+
+        links= new ArrayList<>();
+    }
 
     public int size(){
         return links.size();
@@ -25,4 +29,11 @@ public class GeneratedLinksRepository {
         return links.get(i);
     }
 
+    public ArrayList<String> getLinks() {
+        return links;
+    }
+
+    public void setLinks(ArrayList<String> links) {
+        this.links = links;
+    }
 }

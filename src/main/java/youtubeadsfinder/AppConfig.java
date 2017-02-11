@@ -75,21 +75,22 @@ public class AppConfig {
         org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
         proxy.setProxyType(org.openqa.selenium.Proxy.ProxyType.MANUAL);
 
-        String proxyString = "217.33.216.114:8080";
+        String proxyString = "103.196.182.118:28425";
 
-        //uk 3s/video
+//        3s/video uk proxy good
+//        217.33.216.114:8080
+
+
+//        7s/video
+//        103.196.182.118:28425
+
+//        // 4-5s/video also good proxy
+//        35.162.177.140:8083
+
+
         proxy.setHttpProxy(proxyString);
         proxy.setSslProxy(proxyString);
 //
-//         7s/video
-//        proxy.setHttpProxy("103.196.182.118:28425");
-//        proxy.setSslProxy("103.196.182.118:28425");
-
-        // 4-5s/video also good proxy
-//        proxy.setHttpProxy("35.162.177.140:8083");
-//        proxy.setSslProxy("35.162.177.140:8083");
-
-
         DesiredCapabilities capability = new DesiredCapabilities();
 
         capability.setCapability(CapabilityType.PROXY, proxy);

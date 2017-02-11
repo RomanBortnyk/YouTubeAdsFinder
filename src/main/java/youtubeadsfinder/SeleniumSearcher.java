@@ -1,17 +1,13 @@
 package youtubeadsfinder;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import youtubeadsfinder.generators.VideoLinksGenerator;
 import youtubeadsfinder.repositories.FoundVideoLinksRepository;
-
-import java.util.ArrayList;
+import youtubeadsfinder.repositories.GeneratedLinksRepository;
 
 /**
  * Created by romanb on 2/10/17.
@@ -24,7 +20,9 @@ public class SeleniumSearcher {
     @Autowired
     private StringToFileAppender appender;
     @Autowired
-    private FoundVideoLinksRepository repository;
+    private FoundVideoLinksRepository alreadyFoundLinksrepository;
+    @Autowired
+    private GeneratedLinksRepository generatedRepository;
 
     @Autowired
     private WebDriver driver;
@@ -32,15 +30,27 @@ public class SeleniumSearcher {
     @Autowired
     private WebDriverWait wait;
 
+    private boolean needToGenerateMoreLinks(int currentCount){
 
-    public void search(int count){
+        return (generatedRepository.size() - currentCount) < 10;
 
-        ArrayList<String> links = generator.generate(count);
+    }
 
-        for (int i = 0; i < links.size() ; i++) {
+//    public SeleniumSearcher(){
+//
+//        generator.generate(10);
+//    }
 
-            String currentLink = links.get(i);
-            String log = i + ". video " +currentLink +" ";
+    public void search(int numberOfLinksToExplore){
+
+
+        int count = 0;
+        while (count < numberOfLinksToExplore){
+
+            if (needToGenerateMoreLinks(count)) generator.generate(15);
+
+            String currentLink = generatedRepository.get(count);
+            String log = count + ". video " +currentLink +" ";
 
             try {
 
@@ -63,13 +73,13 @@ public class SeleniumSearcher {
 
                     }else{
 
-                        if (repository.isExist(href)){
+                        if (alreadyFoundLinksrepository.isExist(href)){
 
                             System.out.println(log + "ad link: duplicate" );
                         }else {
 
                             System.out.println(log + "ad link: " + href);
-                            repository.add(href);
+                            alreadyFoundLinksrepository.add(href);
                             appender.appendString(href);
                         }
 
@@ -84,6 +94,8 @@ public class SeleniumSearcher {
 
                 System.out.println(log + "timeout" );
             }
+
+            count++;
         }
 
         //Close the browser
