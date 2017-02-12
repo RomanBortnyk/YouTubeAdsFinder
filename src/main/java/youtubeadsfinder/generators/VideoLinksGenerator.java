@@ -68,7 +68,7 @@ public class VideoLinksGenerator {
                             break;
                         }
 
-                        if ( getIntViewsNumber(viewsNumberString) >=400000){
+                        if ( getIntViewsNumber(viewsNumberString) >=numberOfViewsLimit){
                             repository.add(pattern+href);
 //                            System.out.println(counter +". "+pattern+href);
                             counter++;

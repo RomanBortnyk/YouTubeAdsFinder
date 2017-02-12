@@ -75,7 +75,7 @@ public class AppConfig {
         org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
         proxy.setProxyType(org.openqa.selenium.Proxy.ProxyType.MANUAL);
 
-        String proxyString = "104.196.67.215:80";
+        String proxyString = "103.196.182.118:28425";
 
             // ca fast 142.4.210.208:3129
             // usa very fast 104.196.207.187:80

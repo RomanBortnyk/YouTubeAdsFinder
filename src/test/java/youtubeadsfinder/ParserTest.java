@@ -23,7 +23,7 @@ public class ParserTest {
     @Test
     public void getVideoDurationInSeconds (){
 
-        FoundVideoLinksRepository repository = new FoundVideoLinksRepository("AdLinks");
+        FoundVideoLinksRepository repository = new FoundVideoLinksRepository("/home/romanb/Desktop/advertisement_links");
 
         int commonDuration= 0;
         int counter = 1;
