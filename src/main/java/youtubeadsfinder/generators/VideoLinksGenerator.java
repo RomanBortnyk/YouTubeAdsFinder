@@ -18,9 +18,11 @@ public class VideoLinksGenerator {
     private SearchQueriesGenerator queriesGenerator;
     @Autowired
     private Parser parser;
-
     @Autowired
     private GeneratedLinksRepository repository;
+
+    // only videos with number of views over this value will be added to repository
+    private int numberOfViewsLimit = 400000;
 
     private String pattern = "https://www.youtube.com";
 

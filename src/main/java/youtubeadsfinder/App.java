@@ -20,7 +20,5 @@ public class App {
         searcher.search(100000);
 
 
-//         TO ADD
-//        https://www.youtube.com/watch?v=CBRLQr3OR7I
     }
 }

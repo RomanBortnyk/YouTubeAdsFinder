@@ -37,6 +37,5 @@ public class ParserTest {
 
 //        System.out.println("Common duration: "+ String.format("%.2f", (double)commonDuration/3600) + " hours");
 
-
     }
 }
