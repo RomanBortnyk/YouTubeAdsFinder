@@ -1,4 +1,4 @@
-package youtubeadsfinder;
+package youtubeadsfinder.tools;
 
 import org.springframework.stereotype.Component;
 

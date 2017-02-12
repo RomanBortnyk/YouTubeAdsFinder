@@ -17,6 +17,10 @@ public class App {
 
         SeleniumSearcher searcher = (SeleniumSearcher) applicationContext.getBean("seleniumSearcher");
 
-        searcher.search(1000);
+        searcher.search(100000);
+
+
+//         TO ADD
+//        https://www.youtube.com/watch?v=CBRLQr3OR7I
     }
 }

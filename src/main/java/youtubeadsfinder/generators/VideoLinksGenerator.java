@@ -1,16 +1,12 @@
 package youtubeadsfinder.generators;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import youtubeadsfinder.Parser;
+import youtubeadsfinder.tools.Parser;
 import youtubeadsfinder.repositories.GeneratedLinksRepository;
-
-import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by romanb on 2/7/17.
@@ -38,9 +34,13 @@ public class VideoLinksGenerator {
         while ( !isEnough ){
 
             try {
-
-                Document doc = parser.getDocument(queriesGenerator.generate());
-                Elements results = doc.getElementsByClass("yt-lockup-content");
+                Document document;
+                Elements results;
+                // avoid timeout exception while getDocument
+                document = parser.getDocument(queriesGenerator.generate());
+                if (document!=null){
+                    results = document.getElementsByClass("yt-lockup-content");
+                }else continue;
 
                 Node nodeWithHref;
                 Node nodeWithMetaData;

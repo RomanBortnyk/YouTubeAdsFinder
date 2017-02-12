@@ -3,6 +3,7 @@ package youtubeadsfinder;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import youtubeadsfinder.repositories.FoundVideoLinksRepository;
+import youtubeadsfinder.tools.Parser;
 
 /**
  * Created by romanb on 2/7/17.
@@ -22,7 +23,7 @@ public class ParserTest {
     @Test
     public void getVideoDurationInSeconds (){
 
-        FoundVideoLinksRepository repository = new FoundVideoLinksRepository("AdLinks.txt");
+        FoundVideoLinksRepository repository = new FoundVideoLinksRepository("AdLinks");
 
         int commonDuration= 0;
         int counter = 1;

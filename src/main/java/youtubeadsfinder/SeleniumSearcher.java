@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import youtubeadsfinder.generators.VideoLinksGenerator;
 import youtubeadsfinder.repositories.FoundVideoLinksRepository;
 import youtubeadsfinder.repositories.GeneratedLinksRepository;
+import youtubeadsfinder.tools.StringToFileAppender;
 
 /**
  * Created by romanb on 2/10/17.
@@ -47,7 +48,9 @@ public class SeleniumSearcher {
         int count = 0;
         while (count < numberOfLinksToExplore){
 
-            if (needToGenerateMoreLinks(count)) generator.generate(15);
+            //10 is more probable number of urls
+            // that algorithm can generate per one request to YouTube server
+            if (needToGenerateMoreLinks(count)) generator.generate(10);
 
             String currentLink = generatedRepository.get(count);
             String log = count + ". video " +currentLink +" ";
@@ -58,9 +61,7 @@ public class SeleniumSearcher {
 
                 WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("a[data-sessionlink='feature=player-title']")));
 
-
                 String href = element.getAttribute("href");
-
 
                 if ( href != null && href.equals(currentLink)){
 

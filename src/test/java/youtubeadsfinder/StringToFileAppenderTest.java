@@ -1,14 +1,7 @@
 package youtubeadsfinder;
 
 import org.junit.Test;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.File;
-
-
-import static org.junit.Assert.*;
+import youtubeadsfinder.tools.StringToFileAppender;
 
 /**
  * Created by romanb on 2/10/17.

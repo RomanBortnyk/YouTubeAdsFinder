@@ -1,4 +1,4 @@
-package youtubeadsfinder;
+package youtubeadsfinder.tools;
 
 import com.sun.xml.internal.ws.server.ServerRtException;
 import org.apache.commons.lang.StringEscapeUtils;

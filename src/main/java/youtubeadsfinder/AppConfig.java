@@ -10,8 +10,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import youtubeadsfinder.generators.SearchQueriesGenerator;
 import youtubeadsfinder.repositories.FoundVideoLinksRepository;
+import youtubeadsfinder.tools.StringToFileAppender;
 
-import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.util.Random;
 
@@ -75,18 +75,24 @@ public class AppConfig {
         org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
         proxy.setProxyType(org.openqa.selenium.Proxy.ProxyType.MANUAL);
 
-        String proxyString = "103.196.182.118:28425";
+        String proxyString = "217.33.216.114:8080";
+
+            // ca fast 142.4.210.208:3129
+            // usa very fast 104.196.207.187:80
 
 //        3s/video uk proxy good
 //        217.33.216.114:8080
 
 
-//        7s/video
+//        5s/video usa
 //        103.196.182.118:28425
 
 //        // 4-5s/video also good proxy
 //        35.162.177.140:8083
 
+        // uk 51.179.178.180:3128
+        // uk 46.101.95.132:8118
+        // uk 178.62.98.28	8118
 
         proxy.setHttpProxy(proxyString);
         proxy.setSslProxy(proxyString);
