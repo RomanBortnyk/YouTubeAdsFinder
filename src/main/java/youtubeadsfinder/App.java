@@ -14,7 +14,6 @@ public class App {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-
         SeleniumSearcher searcher = (SeleniumSearcher) applicationContext.getBean("seleniumSearcher");
 
         searcher.search(100000);

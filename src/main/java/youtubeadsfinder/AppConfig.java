@@ -47,7 +47,7 @@ public class AppConfig {
     @Bean
     public FoundVideoLinksRepository foundVideoLinksRepository (){
 
-        return new FoundVideoLinksRepository("/home/romanb/Desktop/AdLinksReserve");
+        return new FoundVideoLinksRepository("AdLinks");
     }
 
     @Bean
@@ -75,14 +75,13 @@ public class AppConfig {
         org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
         proxy.setProxyType(org.openqa.selenium.Proxy.ProxyType.MANUAL);
 
-        String proxyString = "103.196.182.118:28425";
+        String proxyString = "217.33.216.114:8080";
 
             // ca fast 142.4.210.208:3129
             // usa very fast 104.196.207.187:80
 
 //        3s/video uk proxy good
 //        217.33.216.114:8080
-
 
 //        5s/video usa
 //        103.196.182.118:28425
